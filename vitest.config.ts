@@ -13,7 +13,7 @@ export default defineConfig({
 			junit: './reports/junit.xml',
 		},
 		projects: [
-			'./src',
+			'packages/*',
 			{
 				plugins: isCI
 					? [

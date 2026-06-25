@@ -1,0 +1,74 @@
+{
+	"name": "ofetch-presets",
+	"type": "module",
+	"version": "0.0.0",
+	"author": "zhong666 <hi@zhong666.me>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/aa900031/ofetch-presets",
+		"directory": "packages/ofetch-presets"
+	},
+	"keywords": [
+		"ofetch",
+		"ofetch-preset",
+		"ofetch-presets"
+	],
+	"exports": {
+		".": "./src/index.ts",
+		"./kit": "./src/kit.ts",
+		"./package.json": "./package.json"
+	},
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.cts",
+	"typesVersions": {
+		"*": {
+			".": [
+				"./dist/index.d.ts"
+			],
+			"kit": [
+				"./dist/kit.d.ts"
+			]
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsdown",
+		"release": "release-it",
+		"typecheck": "tsc -b --noEmit"
+	},
+	"peerDependencies": {
+		"ofetch": "^1.0.0"
+	},
+	"devDependencies": {
+		"ofetch": "^1.5.1"
+	},
+	"publishConfig": {
+		"exports": {
+			".": {
+				"import": {
+					"types": "./dist/index.d.ts",
+					"default": "./dist/index.js"
+				},
+				"require": {
+					"types": "./dist/index.d.cts",
+					"default": "./dist/index.cjs"
+				}
+			},
+			"./kit": {
+				"import": {
+					"types": "./dist/kit.d.ts",
+					"default": "./dist/kit.js"
+				},
+				"require": {
+					"types": "./dist/kit.d.cts",
+					"default": "./dist/kit.cjs"
+				}
+			},
+			"./package.json": "./package.json"
+		}
+	}
+}

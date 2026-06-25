@@ -32,9 +32,6 @@ importers:
       eslint:
         specifier: ^9.39.4
         version: 9.39.4(jiti@2.7.0)
-      ofetch:
-        specifier: ^1.5.1
-        version: 1.5.1
       release-it:
         specifier: ^20.2.0
         version: 20.2.0(@types/node@22.19.21)(magicast@0.5.3)
@@ -47,6 +44,25 @@ importers:
       vitest:
         specifier: ^4.1.9
         version: 4.1.9(@types/node@22.19.21)(@vitest/coverage-istanbul@4.1.9)(jiti@2.7.0)(yaml@2.9.0)
+
+  packages/ofetch-presets:
+    devDependencies:
+      ofetch:
+        specifier: ^1.5.1
+        version: 1.5.1
+
+  packages/preset-xsrf-token:
+    dependencies:
+      cookie-es:
+        specifier: ^3.1.1
+        version: 3.1.1
+    devDependencies:
+      ofetch:
+        specifier: ^1.5.1
+        version: 1.5.1
+      ofetch-presets:
+        specifier: workspace:*
+        version: link:../ofetch-presets
 
 packages:
 
@@ -1166,6 +1182,9 @@ packages:
 
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
+
+  cookie-es@3.1.1:
+    resolution: {integrity: sha512-UaXxwISYJPTr9hwQxMFYZ7kNhSXboMXP+Z3TRX6f1/NyaGPfuNUZOWP1pUEb75B2HjfklIYLVRfWiFZJyC6Npg==}
 
   core-js-compat@3.49.0:
     resolution: {integrity: sha512-VQXt1jr9cBz03b331DFDCCP90b3fanciLkgiOoy8SBHy06gNf+vQ1A3WFLqG7I8TipYIKeYK9wxd0tUrvHcOZA==}
@@ -4127,6 +4146,8 @@ snapshots:
       meow: 13.2.0
 
   convert-source-map@2.0.0: {}
+
+  cookie-es@3.1.1: {}
 
   core-js-compat@3.49.0:
     dependencies:

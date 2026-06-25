@@ -9,4 +9,4 @@ allowBuilds:
   esbuild: true
 
 packages:
-  - .
+  - ./packages/*
