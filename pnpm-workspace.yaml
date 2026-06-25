@@ -1,0 +1,12 @@
+ignoreWorkspaceRootCheck: true
+shamefullyHoist: true
+shellEmulator: true
+strictPeerDependencies: false
+trustPolicy: no-downgrade
+trustPolicyIgnoreAfter: 43200
+autoInstallPeers: false
+allowBuilds:
+  esbuild: true
+
+packages:
+  - .

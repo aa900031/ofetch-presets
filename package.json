@@ -1,0 +1,89 @@
+{
+	"name": "ofetch-presets",
+	"type": "module",
+	"version": "0.0.0",
+	"packageManager": "pnpm@11.1.2",
+	"author": "zhong666 <hi@zhong666.me>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/aa900031/ofetch-presets"
+	},
+	"keywords": [
+		"ofetch",
+		"ofetch-preset",
+		"ofetch-presets"
+	],
+	"exports": {
+		".": "./src/index.ts",
+		"./kit": "./src/kit.ts",
+		"./package.json": "./package.json"
+	},
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.cts",
+	"typesVersions": {
+		"*": {
+			".": [
+				"./dist/index.d.ts"
+			],
+			"kit": [
+				"./dist/kit.d.ts"
+			]
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsdown",
+		"bench": "vitest bench --run",
+		"release": "release-it",
+		"lint": "eslint .",
+		"test": "vitest run",
+		"typecheck": "tsc -b --noEmit"
+	},
+	"peerDependencies": {
+		"ofetch": "^1.0.0"
+	},
+	"devDependencies": {
+		"@aa900031/eslint-config": "^6.1.0",
+		"@aa900031/release-it-config": "^1.0.0",
+		"@aa900031/tsdown-config": "^0.2.2",
+		"@codspeed/vitest-plugin": "^5.7.0",
+		"@tsconfig/node22": "^22.0.5",
+		"@types/node": "^22.19.19",
+		"@vitest/coverage-istanbul": "^4.1.9",
+		"eslint": "^9.39.4",
+		"ofetch": "^1.5.1",
+		"release-it": "^20.2.0",
+		"tsdown": "^0.22.3",
+		"typescript": "~5.9.3",
+		"vitest": "^4.1.9"
+	},
+	"publishConfig": {
+		"exports": {
+			".": {
+				"import": {
+					"types": "./dist/index.d.ts",
+					"default": "./dist/index.js"
+				},
+				"require": {
+					"types": "./dist/index.d.cts",
+					"default": "./dist/index.cjs"
+				}
+			},
+			"./kit": {
+				"import": {
+					"types": "./dist/kit.d.ts",
+					"default": "./dist/kit.js"
+				},
+				"require": {
+					"types": "./dist/kit.d.cts",
+					"default": "./dist/kit.cjs"
+				}
+			},
+			"./package.json": "./package.json"
+		}
+	}
+}
