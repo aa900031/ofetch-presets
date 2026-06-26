@@ -10,3 +10,14 @@ export function definePreset<
 ): F {
 	return factory
 }
+
+export const defaultRetryStatusCodes = [
+	408,
+	409,
+	425,
+	429,
+	500,
+	502,
+	503,
+	504,
+]
