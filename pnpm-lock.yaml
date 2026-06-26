@@ -51,6 +51,33 @@ importers:
         specifier: ^1.5.1
         version: 1.5.1
 
+  packages/preset-bearer-token:
+    devDependencies:
+      ofetch:
+        specifier: ^1.5.1
+        version: 1.5.1
+      ofetch-presets:
+        specifier: workspace:*
+        version: link:../ofetch-presets
+
+  packages/preset-logger:
+    devDependencies:
+      ofetch:
+        specifier: ^1.5.1
+        version: 1.5.1
+      ofetch-presets:
+        specifier: workspace:*
+        version: link:../ofetch-presets
+
+  packages/preset-retry-after:
+    devDependencies:
+      ofetch:
+        specifier: ^1.5.1
+        version: 1.5.1
+      ofetch-presets:
+        specifier: workspace:*
+        version: link:../ofetch-presets
+
   packages/preset-xsrf-token:
     dependencies:
       cookie-es:
