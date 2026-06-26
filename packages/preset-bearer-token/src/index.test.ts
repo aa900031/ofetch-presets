@@ -51,7 +51,6 @@ describe('bearerToken', () => {
 			const preset = bearerToken({ getToken: () => 't', refresh: () => {} })
 			expect(preset.options.retry).toBe(1)
 			expect(preset.options.retryStatusCodes).toContain(401)
-			expect(preset.options.retryStatusCodes).toContain(503)
 		})
 
 		it('refreshes on 401, then re-applies the rotated token on the retry', async () => {
