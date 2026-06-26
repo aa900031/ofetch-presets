@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 
+## v0.1.1
+
+[compare changes](https://github.com/aa900031/ofetch-presets/compare/ofetch-preset-retry-after@0.1.0...${npm.name}@0.1.1)
+
+### 🩹 Fixes
+
+-  Unnecessary type ([48d8f23](https://github.com/aa900031/ofetch-presets/commit/48d8f2323053b1c13bc00eb4bddafdfed70b5ad4))
+
+
+
+#### ❤️ Contributors
+
+- Zhong666 <aa900031@gmail.com>
+
 ## v0.1.0
 
 
