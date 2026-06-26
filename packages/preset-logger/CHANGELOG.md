@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 
+## v0.1.2
+
+[compare changes](https://github.com/aa900031/ofetch-presets/compare/ofetch-preset-logger@0.1.1...${npm.name}@0.1.2)
+
+### 🏡 Chore
+
+-  Only pack dist folder ([4de4e80](https://github.com/aa900031/ofetch-presets/commit/4de4e80bc86c1c107c1d2845de956ae33f73c69e))
+
+
+
+#### ❤️ Contributors
+
+- Zhong666 <aa900031@gmail.com>
+
 ## v0.1.1
 
 [compare changes](https://github.com/aa900031/ofetch-presets/compare/ofetch-preset-logger@0.1.0...${npm.name}@0.1.1)
