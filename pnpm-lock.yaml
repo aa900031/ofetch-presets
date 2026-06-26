@@ -9,7 +9,7 @@ importers:
   .:
     devDependencies:
       '@aa900031/eslint-config':
-        specifier: ^6.1.0
+        specifier: ^6.1.2
         version: 6.1.2(@typescript-eslint/typescript-estree@8.61.0(typescript@5.9.3))(@typescript-eslint/utils@8.61.0(eslint@9.39.4(jiti@2.7.0))(typescript@5.9.3))(eslint@9.39.4(jiti@2.7.0))(typescript@5.9.3)(vitest@4.1.9)
       '@aa900031/release-it-config':
         specifier: ^1.0.0
@@ -24,7 +24,7 @@ importers:
         specifier: ^22.0.5
         version: 22.0.5
       '@types/node':
-        specifier: ^22.19.19
+        specifier: ^22.19.21
         version: 22.19.21
       '@vitest/coverage-istanbul':
         specifier: ^4.1.9
