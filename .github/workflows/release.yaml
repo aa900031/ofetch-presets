@@ -17,9 +17,7 @@ jobs:
       id-token: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+        uses: actions/checkout@v6
 
       - name: Setup
         uses: aa900031/github-actions/setup-node@main
@@ -27,7 +25,7 @@ jobs:
           no-turbo-cache: 'true'
 
       - name: Build dist
-        run: pnpm run build
+        run: node --run build
 
       - name: Publish to npm
         run: pnpm -r publish --access public --no-git-checks
