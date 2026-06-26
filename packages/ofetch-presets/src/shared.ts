@@ -5,7 +5,7 @@ export interface Preset<
 > {
 	name: string
 	options?: Options
-	presets?: ReadonlyArray<Preset<Options> | Options | null | undefined | false>
+	presets?: ReadonlyArray<Preset | Options | null | undefined | false>
 	[key: string]: unknown
 }
 

@@ -125,14 +125,16 @@ function resolvePreset(
 	visiting.delete(preset)
 }
 
-export function resolveOptions<T extends FetchOptions = FetchOptions>(
-	sources: ReadonlyArray<Preset<T> | T | null | undefined | false>,
-): ResolvedOptions<T> {
+export function resolveOptions<
+	Options extends FetchOptions = FetchOptions,
+>(
+	sources: (Preset | Options | null | undefined | false)[],
+): ResolvedOptions<Options> {
 	const out: Record<string, unknown> = { headers: new Headers() }
 	const visiting = new Set<Record<string, unknown>>()
 
 	for (let i = 0; i < sources.length; i++)
 		processSource(sources[i], out, visiting, `sources[${i}]`)
 
-	return out as ResolvedOptions<T>
+	return out as ResolvedOptions<Options>
 }
