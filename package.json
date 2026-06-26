@@ -8,7 +8,7 @@
 	"scripts": {
 		"build": "pnpm -r run build",
 		"bench": "vitest bench --run",
-		"release": "pnpm -r run release",
+		"release": "pnpm -r --workspace-concurrency=1 run release",
 		"test": "vitest run",
 		"lint": "eslint . --cache --cache-location ./node_modules/.cache/eslint",
 		"typecheck": "pnpm -r run typecheck"
