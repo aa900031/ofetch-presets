@@ -23,17 +23,17 @@ export const logger = definePreset((
 	return {
 		name: 'logger',
 		options: {
-			onRequest: (context: FetchContext) => {
+			onRequest: (context) => {
 				starts.set(context, Date.now())
 				emit('request', context, undefined)
 			},
-			onResponse: (context: FetchContext) => {
+			onResponse: (context) => {
 				emit('response', context, Date.now())
 			},
-			onRequestError: (context: FetchContext) => {
+			onRequestError: (context) => {
 				emit('request-error', context, undefined)
 			},
-			onResponseError: (context: FetchContext) => {
+			onResponseError: (context) => {
 				emit('response-error', context, Date.now())
 			},
 		},

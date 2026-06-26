@@ -1,4 +1,3 @@
-import type { FetchContext } from 'ofetch'
 import { definePreset } from 'ofetch-presets/kit'
 import { parseRetryAfter } from './parse'
 
@@ -23,9 +22,7 @@ export const retryAfter = definePreset((
 	return {
 		name: 'retry-after',
 		options: {
-			// Honour the server's Retry-After. Compose with `{ retry: N }` to enable retries;
-			// ofetch's default retryStatusCodes already include 429/503.
-			retryDelay: (context: FetchContext) => {
+			retryDelay: (context) => {
 				const header = context.response?.headers.get(headerName)
 				const delay = parseRetryAfter(header, Date.now()) ?? fallbackDelay
 				return maxDelay != null ? Math.min(delay, maxDelay) : delay
